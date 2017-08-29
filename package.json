@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "concurrently": "^3.5.0",
+    "express": "^4.15.4",
+    "youtube-search": "^1.0.10"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  }
+}
