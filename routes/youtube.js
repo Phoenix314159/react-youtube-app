@@ -8,7 +8,7 @@ const config = require('../config/config'),
 
 module.exports = app => {
 
-    app.get('/api/search', async (req, res) => {
+    app.get('/api/search', (req, res) => {
         search(req.query.term, opts, (err, results) => {
             if (err) {
                 return console.log(err);
