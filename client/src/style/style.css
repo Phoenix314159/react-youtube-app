@@ -1,6 +1,16 @@
+.header {
+    font-family: 'Baloo Bhaijaan', cursive;
+    margin: 1.5vh auto;
+    width: 20vw;
+}
+
 .search-bar {
     margin: 20px;
     text-align: center;
+}
+
+.details {
+    font-family: 'Baloo Bhaijaan', cursive;
 }
 
 .search-bar input {
@@ -28,4 +38,5 @@
 
 .list-group {
     list-style-type: none;
+    font-family: 'Baloo Bhaijaan', cursive;
 }
