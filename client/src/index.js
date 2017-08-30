@@ -15,14 +15,14 @@ class App extends Component {
         };
     }
     async componentDidMount() {
-        const res = await axios.get('/api/search?term=cats');
+        let res = await axios.get('/api/search?term=cats');
         this.setState({
             videos: await res.data.splice(1),
             selectedVideo: await res.data[0]
         });
     }
     async videoSearch(term) {
-        const res = await axios.get(`/api/search?term=${term}`);
+        let res = await axios.get(`/api/search?term=${term}`);
         this.setState({
             videos: await res.data,
             selectedVideo: await res.data[0]
@@ -44,7 +44,6 @@ class App extends Component {
         )
     }
 }
-
 
 ReactDOM.render(<App/>, document.querySelector('#root'));
 

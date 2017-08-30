@@ -1,19 +1,15 @@
 const config = require('../config/config'),
-    search = require('youtube-search'),
-    opts = {
-        maxResults: 7,
-        key: config.API_KEY,
-        order: 'rating'
-    };
+    search = require('youtube-search');
 
 module.exports = app => {
 
     app.get('/api/search', (req, res) => {
-        search(req.query.term, opts, (err, results) => {
+        search(req.query.term, config.options, (err, results) => {
             if (err) {
-                return console.log(err);
+                console.log(err);
+                res.status(404).send(err);
             }
-            res.send(results);
+            res.status(200).send(results);
         })
     });
 }

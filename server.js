@@ -11,6 +11,7 @@ require('./routes/youtube')(app);
 // app.get('*', (req, res) => {
 //     res.sendFile(__dirname + '/client/build/index.html');
 // })
+//<----------------------------------->
 
 app.listen(config.port, () => {
     console.log(`listening on port ${config.port}`);
