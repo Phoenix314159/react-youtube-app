@@ -5,6 +5,7 @@
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-scrollbar-js": "^1.0.1",
     "request": "^2.81.0"
   },
   "devDependencies": {

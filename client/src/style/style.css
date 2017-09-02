@@ -1,11 +1,13 @@
 .header {
     font-family: 'Baloo Bhaijaan', cursive;
-    margin: 1.5vh auto;
+    margin: 1vh auto;
     width: 20vw;
+    text-align: center;
 }
 
 .search-bar {
-    margin: 20px;
+    margin-bottom: 10px;
+    margin-right: 30vw;
     text-align: center;
 }
 
@@ -13,8 +15,15 @@
     font-family: 'Baloo Bhaijaan', cursive;
 }
 
+.scrollBar {
+    width: 500px;
+    height: 720px;
+    border: 2px solid black;
+    border-radius: 7pt;
+}
+
 .search-bar input {
-    width: 75%;
+    width: 32%;
 }
 
 .video-item img {
@@ -24,8 +33,8 @@
 .video-detail .details {
     margin-top: 10px;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 2px solid black;
+    border-radius: 7pt;
 }
 
 .list-group-item {

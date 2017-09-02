@@ -1,20 +1,36 @@
-import React from 'react';
+import React, {Component} from 'react';
 import VideoListItem from './video-list-item';
+import ReactScrollbar from 'react-scrollbar-js';
 
-const VideoList = (props) => {
-    const videoItems = props.videos.map(video => {
+export default class VideoList extends Component {
+
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        let videoItems = this.props.videos.map(video => {
+            return (
+                <VideoListItem
+                    onVideoSelect={this.props.onVideoSelect}
+                    key={video.id} video={video}/>
+            )
+
+        });
+        let scrollBar = {
+            'width': '500px',
+            'height': '720px',
+            'border': '2px solid black',
+            'border-radius': '7pt'
+        }
         return (
-            <VideoListItem
-                onVideoSelect={props.onVideoSelect}
-                key={video.id} video={video}/>
+            <div>
+                <ReactScrollbar style={scrollBar}>
+                    <div className="should-have-a-children scroll-me">
+                        {videoItems}
+                    </div>
+                </ReactScrollbar>
+            </div>
         )
-    });
-    return (
-        <div>
-            <ul className="col-md-4 list-group">
-                {videoItems}
-            </ul>
-        </div>
-    )
+    }
 }
-export default VideoList;

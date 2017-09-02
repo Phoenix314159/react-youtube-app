@@ -5,17 +5,21 @@ export default class SearchBar extends Component {
         super(props);
         this.state = {term: ''};
     }
+
     onInputChange(term) {
         this.setState({term});
         this.props.onSearchTermChange(term);
     }
+
     render() {
         return (
             <div className="search-bar">
-                <input //controlled from element, state tells input what it should be
+                <h3 className="header">Search For Videos</h3>
+                <input
                     value={this.state.term}
                     onChange={event => this.onInputChange(event.target.value)}/>
             </div>
+
         )
     }
 }
