@@ -9,11 +9,10 @@ export const videoSearch = term => async dispatch => {
     })
 };
 
-export const selectVideo = video => dispatch => {
+export const clickVideo = video => dispatch => {
     return dispatch({
         type: type.SELECT_VIDEO,
         payload: video
     })
-
 };
 

@@ -1,8 +1,19 @@
+body {
+  background-image: url(../../imgs/ojuDZwU.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.centerAll {
+  margin-left: 4vw;
+}
 .header {
   font-family: 'Baloo Bhaijaan', cursive;
   margin: 1vh auto;
   width: 20vw;
   text-align: center;
+  color: whitesmoke;
 }
 
 .search-bar {
@@ -13,13 +24,8 @@
 
 .details {
   font-family: 'Baloo Bhaijaan', cursive;
-}
-
-.scrollBar {
-  width: 500px;
-  height: 720px;
-  border: 2px solid black;
-  border-radius: 7pt;
+  text-align: center;
+  background-color: whitesmoke;
 }
 
 .search-bar input {
@@ -48,4 +54,39 @@
 .list-group {
   list-style-type: none;
   font-family: 'Baloo Bhaijaan', cursive;
+}
+
+.scrollBar {
+  width: 500px;
+  height: 747px;
+  border: 2px solid black;
+  border-radius: 7pt;
+  padding: 1%;
+  background-color: whitesmoke;
+}
+
+@media only screen and (max-width: 1440px) {
+  .scrollBar {
+    width: 400px;
+    height: 596px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .scrollBar {
+    width: 300px;
+    height: 446px;
+  }
+  .media-heading {
+    font-size: .9em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .scrollBar {
+    width: 220px;
+    height: 393px;
+  }
+  .media-heading {
+    font-size: .8em;
+  }
 }
