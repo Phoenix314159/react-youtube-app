@@ -6,9 +6,9 @@ const searchReducer = (state = {}, action) => {
             return {...state, videos: action.payload, selectedVideo: action.payload[0]};
         case type.SELECT_VIDEO:
             let singleVideo = [];
-                state.videos.map(a => {
-                    if (a === action.payload) {
-                        singleVideo.push(a);
+                state.videos.map(video => {
+                    if (video === action.payload) {
+                        singleVideo.push(video);
                     }
                 });
             return {...state, selectedVideo: singleVideo[0]};
