@@ -16,7 +16,7 @@ export default class VideoList extends Component {
             'width': '500px',
             'height': '720px',
             'border': '2px solid black',
-            'border-radius': '7pt'
+            'borderRadius': '7pt'
         };
         return (
             <div>
